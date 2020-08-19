@@ -3,22 +3,22 @@
   <POU Name="FB_PAT" Id="{3be33162-daee-4f51-87ff-ad4c09c1e309}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_PAT
 VAR_INPUT
-	Velocity : LREAL;
+    Velocity : LREAL;
 END_VAR
 VAR_OUTPUT
-	FwLimPos : LREAL; // Positive limit position
-	BwLimPos : LREAL; // 
+    FwLimPos : LREAL; // Positive limit position
+    BwLimPos : LREAL; //
 END_VAR
 VAR_IN_OUT
-	Stage : DUT_MotionStage;
+    Stage : DUT_MotionStage;
 END_VAR
 VAR
-	fbMicroStepCount : FB_MicroStepCountTest;
-	
-	fbMove: MC_Jog;
-	tFwLim: F_TRIG;
-	tBwLim: F_TRIG;
-	Dir: INT;
+    fbMicroStepCount : FB_MicroStepCountTest;
+
+    fbMove: MC_Jog;
+    tFwLim: F_TRIG;
+    tBwLim: F_TRIG;
+    Dir: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -28,23 +28,23 @@ tFwLim(CLK:=Stage.bLimitForwardEnable);
 tBwLim(CLK:=Stage.bLimitBackwardEnable);
 
 WHILE Stage.bLimitBackwardEnable AND Stage.bLimitForwardEnable DO
-	IF tFwLim.Q OR tBwLim.Q THEN
-		IF (Dir = 1 AND tBwLim.Q) OR (Dir = -1 AND tFwLim.Q) THEN
-			// Error, limits backwards
-			EXIT;
-		END_IF
-		
-		IF tFwLim.Q THEN
-			FwLimPos := Stage.Axis.NcToPlc.ActPos;
-		ELSIF tBwLim.Q THEN
-			BwLimPos := Stage.Axis.NcToPlc.ActPos;
-		END_IF
-		
-		
-	END_IF
-	
-	
-	
+    IF tFwLim.Q OR tBwLim.Q THEN
+        IF (Dir = 1 AND tBwLim.Q) OR (Dir = -1 AND tFwLim.Q) THEN
+            // Error, limits backwards
+            EXIT;
+        END_IF
+
+        IF tFwLim.Q THEN
+            FwLimPos := Stage.Axis.NcToPlc.ActPos;
+        ELSIF tBwLim.Q THEN
+            BwLimPos := Stage.Axis.NcToPlc.ActPos;
+        END_IF
+
+
+    END_IF
+
+
+
 END_WHILE
 
 // Discover minimum step size in one direction
@@ -53,9 +53,5 @@ END_WHILE
 
 fbMove(Axis:=Stage.Axis, Velocity:=Velocity, Mode:=E_JogMode.MC_JOGMODE_CONTINOUS);]]></ST>
     </Implementation>
-    <LineIds Name="FB_PAT">
-      <LineId Id="31" Count="28" />
-      <LineId Id="9" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
