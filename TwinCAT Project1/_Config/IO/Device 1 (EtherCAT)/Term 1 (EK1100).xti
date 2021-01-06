@@ -132,13 +132,13 @@
 				<CoeProfile ProfileNo="18355081"/>
 			</EtherCAT>
 		</Box>
-		<Box File="M3K2 X.xti" Id="5">
+		<Box File="M4K2 X.xti" Id="5">
 			<EtherCAT PortABoxInfo="#x01000004"/>
 		</Box>
-		<Box File="M3K2 Y.xti" Id="7">
+		<Box File="M4K2 Y.xti" Id="7">
 			<EtherCAT PortABoxInfo="#x01000005"/>
 		</Box>
-		<Box File="M3K2 rX.xti" Id="6">
+		<Box File="M4K2 rX.xti" Id="6">
 			<EtherCAT PortABoxInfo="#x01000007"/>
 		</Box>
 		<Box File="STO (EL1004).xti" Id="8">

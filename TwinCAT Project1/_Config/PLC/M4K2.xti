@@ -20,7 +20,7 @@
 			</Format>
 		</DataType>
 		<DataType>
-			<Name GUID="{CBC83B73-B816-4597-A9E5-2B03263CA131}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">NCTOPLC_AXIS_REF_STATE</Name>
+			<Name GUID="{4C3FC5AC-D5AA-44C6-AC5A-159774BA0F6D}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">NCTOPLC_AXIS_REF_STATE</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
 				<Name>Operational</Name>
@@ -131,12 +131,6 @@
 				<BitOffs>17</BitOffs>
 			</SubItem>
 			<SubItem>
-				<Name>IsDriveLimitActive</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
-				<BitSize>1</BitSize>
-				<BitOffs>18</BitOffs>
-			</SubItem>
-			<SubItem>
 				<Name>ContinuousMotion</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
 				<BitSize>1</BitSize>
@@ -223,11 +217,6 @@
 			<Format Name="IEC">
 				<Printf>16#%08X</Printf>
 			</Format>
-			<Relations>
-				<Relation Priority="100">
-					<Type>{4C3FC5AC-D5AA-44C6-AC5A-159774BA0F6D}</Type>
-				</Relation>
-			</Relations>
 		</DataType>
 		<DataType>
 			<Name GUID="{6EF49753-C72C-4F50-AA44-3C7498E76CFE}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">NCTOPLC_AXIS_REF_OPMODE</Name>
@@ -423,11 +412,11 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC" TcBaseType="true">NCTOPLC_AXIS_REF</Name>
+			<Name GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC" TcBaseType="true">NCTOPLC_AXIS_REF</Name>
 			<BitSize>2048</BitSize>
 			<SubItem>
 				<Name>StateDWord</Name>
-				<Type GUID="{CBC83B73-B816-4597-A9E5-2B03263CA131}" Namespace="MC">NCTOPLC_AXIS_REF_STATE</Type>
+				<Type GUID="{4C3FC5AC-D5AA-44C6-AC5A-159774BA0F6D}" Namespace="MC">NCTOPLC_AXIS_REF_STATE</Type>
 				<BitSize>32</BitSize>
 				<BitOffs>0</BitOffs>
 			</SubItem>
@@ -682,18 +671,6 @@ External Setpoint Generation:
 				<BitOffs>1600</BitOffs>
 			</SubItem>
 			<SubItem>
-				<Name>AbsPhasingPos</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
-				<BitSize>64</BitSize>
-				<BitOffs>1664</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>TorqueOffset</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
-				<BitSize>64</BitSize>
-				<BitOffs>1728</BitOffs>
-			</SubItem>
-			<SubItem>
 				<Name>ActPosWithoutPosCorrection</Name>
 				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
 				<BitSize>64</BitSize>
@@ -738,9 +715,6 @@ External Setpoint Generation:
 				</Relation>
 				<Relation Priority="100">
 					<Type GUID="{8CDE0C45-AB9D-42DB-BC94-1CF7521AB268}"/>
-				</Relation>
-				<Relation Priority="100">
-					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}"/>
 				</Relation>
 			</Relations>
 		</DataType>
@@ -923,16 +897,16 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 	</DataTypes>
-	<Project GUID="{EE2891CD-1517-4345-BE6E-EB1367563E2D}" Name="M3K2" PrjFilePath="..\..\M3K2\M3K2.plcproj" TmcFilePath="..\..\M3K2\M3K2.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="M2K2\M2K2.tmc">
-			<Name>M3K2 Instance</Name>
+	<Project GUID="{EE2891CD-1517-4345-BE6E-EB1367563E2D}" Name="M4K2" PrjFilePath="..\..\M4K2\M4K2.plcproj" TmcFilePath="..\..\M4K2\M4K2.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="M3K2\M3K2.tmc">
+			<Name>M4K2 Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
 				<Var>
 					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 					<Comment>
-						<![CDATA[AMS Net ID used for FB_EcatDiag, among others]]>
+						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
 					</Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
@@ -946,7 +920,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -996,55 +970,55 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.M1.bLimitForwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Forward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.bLimitBackwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Backward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.bHome</Name>
 					<Comment>
-						<![CDATA[NO Home Switch: TRUE if at home]]>
+						<![CDATA[ NO Home Switch: TRUE if at home]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.bHardwareEnable</Name>
 					<Comment>
-						<![CDATA[NC STO Input: TRUE if ok to move]]>
+						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.nRawEncoderULINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for ULINT (Biss-C)]]>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
 					</Comment>
 					<Type>ULINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.nRawEncoderUINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for UINT (Relative Encoders)]]>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
 					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.nRawEncoderINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for INT (LVDT)]]>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbMotionStageM1.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -1093,7 +1067,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M2.Axis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -1143,55 +1117,55 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.M2.bLimitForwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Forward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M2.bLimitBackwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Backward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M2.bHome</Name>
 					<Comment>
-						<![CDATA[NO Home Switch: TRUE if at home]]>
+						<![CDATA[ NO Home Switch: TRUE if at home]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M2.bHardwareEnable</Name>
 					<Comment>
-						<![CDATA[NC STO Input: TRUE if ok to move]]>
+						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M2.nRawEncoderULINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for ULINT (Biss-C)]]>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
 					</Comment>
 					<Type>ULINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.M2.nRawEncoderUINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for UINT (Relative Encoders)]]>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
 					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.M2.nRawEncoderINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for INT (LVDT)]]>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbMotionStageM2.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -1240,7 +1214,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M3.Axis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -1290,55 +1264,55 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.M3.bLimitForwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Forward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M3.bLimitBackwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Backward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M3.bHome</Name>
 					<Comment>
-						<![CDATA[NO Home Switch: TRUE if at home]]>
+						<![CDATA[ NO Home Switch: TRUE if at home]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M3.bHardwareEnable</Name>
 					<Comment>
-						<![CDATA[NC STO Input: TRUE if ok to move]]>
+						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M3.nRawEncoderULINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for ULINT (Biss-C)]]>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
 					</Comment>
 					<Type>ULINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.M3.nRawEncoderUINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for UINT (Relative Encoders)]]>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
 					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.M3.nRawEncoderINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for INT (LVDT)]]>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbMotionStageM3.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -1387,7 +1361,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.fbM1Stats.Axis.Axis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -1437,55 +1411,55 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbM1Stats.Axis.bLimitForwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Forward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM1Stats.Axis.bLimitBackwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Backward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM1Stats.Axis.bHome</Name>
 					<Comment>
-						<![CDATA[NO Home Switch: TRUE if at home]]>
+						<![CDATA[ NO Home Switch: TRUE if at home]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM1Stats.Axis.bHardwareEnable</Name>
 					<Comment>
-						<![CDATA[NC STO Input: TRUE if ok to move]]>
+						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM1Stats.Axis.nRawEncoderULINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for ULINT (Biss-C)]]>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
 					</Comment>
 					<Type>ULINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM1Stats.Axis.nRawEncoderUINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for UINT (Relative Encoders)]]>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
 					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM1Stats.Axis.nRawEncoderINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for INT (LVDT)]]>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM2Stats.Axis.Axis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -1535,55 +1509,55 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbM2Stats.Axis.bLimitForwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Forward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM2Stats.Axis.bLimitBackwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Backward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM2Stats.Axis.bHome</Name>
 					<Comment>
-						<![CDATA[NO Home Switch: TRUE if at home]]>
+						<![CDATA[ NO Home Switch: TRUE if at home]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM2Stats.Axis.bHardwareEnable</Name>
 					<Comment>
-						<![CDATA[NC STO Input: TRUE if ok to move]]>
+						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM2Stats.Axis.nRawEncoderULINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for ULINT (Biss-C)]]>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
 					</Comment>
 					<Type>ULINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM2Stats.Axis.nRawEncoderUINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for UINT (Relative Encoders)]]>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
 					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM2Stats.Axis.nRawEncoderINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for INT (LVDT)]]>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM3Stats.Axis.Axis.NcToPlc</Name>
-					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
 						<Name>AxisState</Name>
 						<Comment>
@@ -1633,49 +1607,49 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbM3Stats.Axis.bLimitForwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Forward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM3Stats.Axis.bLimitBackwardEnable</Name>
 					<Comment>
-						<![CDATA[NC Backward Limit Switch: TRUE if ok to move]]>
+						<![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM3Stats.Axis.bHome</Name>
 					<Comment>
-						<![CDATA[NO Home Switch: TRUE if at home]]>
+						<![CDATA[ NO Home Switch: TRUE if at home]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM3Stats.Axis.bHardwareEnable</Name>
 					<Comment>
-						<![CDATA[NC STO Input: TRUE if ok to move]]>
+						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM3Stats.Axis.nRawEncoderULINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for ULINT (Biss-C)]]>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
 					</Comment>
 					<Type>ULINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM3Stats.Axis.nRawEncoderUINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for UINT (Relative Encoders)]]>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
 					</Comment>
 					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbM3Stats.Axis.nRawEncoderINT</Name>
 					<Comment>
-						<![CDATA[Raw encoder IO for INT (LVDT)]]>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
@@ -1689,7 +1663,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.M1.bBrakeRelease</Name>
 					<Comment>
-						<![CDATA[NC Brake Output: TRUE to release brake]]>
+						<![CDATA[ NC Brake Output: TRUE to release brake]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
@@ -1704,7 +1678,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.M2.bBrakeRelease</Name>
 					<Comment>
-						<![CDATA[NC Brake Output: TRUE to release brake]]>
+						<![CDATA[ NC Brake Output: TRUE to release brake]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
@@ -1719,7 +1693,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.M3.bBrakeRelease</Name>
 					<Comment>
-						<![CDATA[NC Brake Output: TRUE to release brake]]>
+						<![CDATA[ NC Brake Output: TRUE to release brake]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
@@ -1734,7 +1708,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbM1Stats.Axis.bBrakeRelease</Name>
 					<Comment>
-						<![CDATA[NC Brake Output: TRUE to release brake]]>
+						<![CDATA[ NC Brake Output: TRUE to release brake]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
@@ -1745,7 +1719,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbM2Stats.Axis.bBrakeRelease</Name>
 					<Comment>
-						<![CDATA[NC Brake Output: TRUE to release brake]]>
+						<![CDATA[ NC Brake Output: TRUE to release brake]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
@@ -1756,7 +1730,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbM3Stats.Axis.bBrakeRelease</Name>
 					<Comment>
-						<![CDATA[NC Brake Output: TRUE to release brake]]>
+						<![CDATA[ NC Brake Output: TRUE to release brake]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
@@ -1766,7 +1740,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>PMPS_GVL.SuccessfulPreemption</Name>
 					<Comment>
-						<![CDATA[Any time BPTM applies a new BP request which is confirmed]]>
+						<![CDATA[ Any time BPTM applies a new BP request which is confirmed]]>
 					</Comment>
 					<Type>UDINT</Type>
 					<InOut>7</InOut>
@@ -1774,7 +1748,7 @@ External Setpoint Generation:
 				<Var>
 					<Name>PMPS_GVL.AccumulatedFF</Name>
 					<Comment>
-						<![CDATA[Any time a FF occurs]]>
+						<![CDATA[ Any time a FF occurs]]>
 					</Comment>
 					<Type>UDINT</Type>
 					<InOut>7</InOut>
@@ -1786,16 +1760,16 @@ External Setpoint Generation:
 		</Instance>
 	</Project>
 	<Mappings>
-		<OwnerA Name="M3K2 Instance">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^M3K2 X">
+		<OwnerA Name="M4K2 Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^M4K2 X">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^M3K2 Y">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^M4K2 Y">
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^M3K2 rX">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^M4K2 rX">
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>

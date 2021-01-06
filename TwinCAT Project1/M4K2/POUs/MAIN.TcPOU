@@ -3,35 +3,35 @@
   <POU Name="Main" Id="{6f9b8da4-c7ba-4f90-95cf-864eb78a6b2a}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM Main
 VAR
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[M2K2 X]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[M2K2 X]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[M4K2 X]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[M4K2 X]^STM Status^Status^Digital input 2'}
     M1 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
     fbMotionStageM1 : FB_MotionStage;
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[M2K2 Y]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[M2K2 Y]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[M4K2 Y]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[M4K2 Y]^STM Status^Status^Digital input 2'}
     M2 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
     fbMotionStageM2 : FB_MotionStage;
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[M2K2 rX]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[M2K2 rX]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[M4K2 rX]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[M4K2 rX]^STM Status^Status^Digital input 2'}
     M3 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
     fbMotionStageM3 : FB_MotionStage;
 
 
-    fbStepSizeTest_M2K2X : FB_MicroStepCountTest := (
+    fbStepSizeTest_M4K2X : FB_MicroStepCountTest := (
         fStepSize := 0.00015625,
         nSteps := 1000,
         fMicroStep := 0.00015625,
         fVelocity := 1,
         tSettleTime := T#1S);
 
-    fbStepSizeTest_M2K2Y : FB_MicroStepCountTest := (
+    fbStepSizeTest_M4K2Y : FB_MicroStepCountTest := (
         fStepSize := 0.0097656,
         nSteps := 1000,
         fMicroStep := 0.0097656,
         fVelocity := 0.5,
         tSettleTime := T#1S);
 
-    fbStepSizeTest_M2K2rX : FB_MicroStepCountTest := (
+    fbStepSizeTest_M4K2rX : FB_MicroStepCountTest := (
         fStepSize := 0.0013021,
         nSteps := 1000,
         fMicroStep := 0.0013021,
@@ -63,9 +63,9 @@ fbM1Stats(Axis:=M1);
 fbM2Stats(Axis:=M2);
 fbM3Stats(Axis:=M3);
 
-fbStepSizeTest_M2K2X(Axis:=M1.Axis);
-fbStepSizeTest_M2K2Y(Axis:=M2.Axis);
-fbStepSizeTest_M2K2rX(Axis:=M3.Axis);]]></ST>
+fbStepSizeTest_M4K2X(Axis:=M1.Axis);
+fbStepSizeTest_M4K2Y(Axis:=M2.Axis);
+fbStepSizeTest_M4K2rX(Axis:=M3.Axis);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

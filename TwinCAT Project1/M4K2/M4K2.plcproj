@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ee2891cd-1517-4345-be6e-eb1367563e2d}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
-    <Name>M3K2</Name>
+    <Name>M4K2</Name>
     <ProgramVersion>3.1.4022.7</ProgramVersion>
     <Application>{a0be4b2a-b540-4186-ad14-f7e7532a5345}</Application>
     <TypeSystem>{662c5eb9-0a71-43b8-80b8-eca923003b1a}</TypeSystem>
@@ -69,7 +69,7 @@
     </PlaceholderResolution>
   </ItemGroup>
   <ItemGroup>
-    <None Include="M3K2.tmc">
+    <None Include="M4K2.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>
