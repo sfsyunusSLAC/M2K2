@@ -1,3 +1,3 @@
-# M2K2 TwinCAT project
+# RIX_SAT TwinCAT project
 
-Project files for M2K2 mirror system
+Project files for RIX Toyama mirror systems site acceptance tests
