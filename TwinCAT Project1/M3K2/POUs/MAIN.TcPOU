@@ -50,10 +50,17 @@ VAR
     END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-M1.bHardwareEnable := bSTOEnable1 AND bSTOEnable2;
-M2.bHardwareEnable := bSTOEnable1 AND bSTOEnable2;
-M3.bHardwareEnable := bSTOEnable1 AND bSTOEnable2;
+      <ST><![CDATA[M1.nEnableMode;
+M2.nEnableMode;
+M3.nEnableMode;
+
+//M1.bHardwareEnable := bSTOEnable1 AND bSTOEnable2;
+//M2.bHardwareEnable := bSTOEnable1 AND bSTOEnable2;
+//M3.bHardwareEnable := bSTOEnable1 AND bSTOEnable2;
+
+M1.bHardwareEnable := bSTOEnable1;
+M2.bHardwareEnable := bSTOEnable1;
+M3.bHardwareEnable := bSTOEnable1;
 
 fbMotionStageM1(stMotionStage:=M1);
 fbMotionStageM2(stMotionStage:=M2);

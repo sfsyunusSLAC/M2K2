@@ -1352,11 +1352,11 @@ External Setpoint Generation:
 		<AxisPara>
 			<General UnitName="urad"/>
 			<Dynamic AccelerationMaximum="200" DecelerationMaximum="200" Acceleration="200" Deceleration="200" DelayTime="0.008"/>
-			<Velo Maximum="140.85"/>
+			<Velo Maximum="20"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="29">
-			<EncPara ScaleFactorNumerator="0.0025826446" Offset="-1152" MaxCount="#x00061a80" ReferenceSystem="1">
+			<EncPara ScaleFactorNumerator="0.005236" MaxCount="#xffffffff">
 				<Inc RefSoftSyncMask="#x00000000"/>
 			</EncPara>
 			<Vars VarGrpType="1">
@@ -1399,8 +1399,8 @@ External Setpoint Generation:
 			</Vars>
 		</Encoder>
 		<Drive Name="Drive" DrvType="24">
-			<DrvPara Inverse="true">
-				<Analog VeloReferenz="140.85" ScaleFactorActTorque="0.1"/>
+			<DrvPara>
+				<Analog VeloReferenz="20" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
 			</DrvPara>
 			<Vars VarGrpType="1">
