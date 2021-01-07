@@ -18,6 +18,6 @@
 		</SvbTask>
 		<Axis File="M3K2 X.xti" Id="1"/>
 		<Axis File="M3K2 Y.xti" Id="2"/>
-		<Axis File="M3K2 rX.xti" Id="3"/>
+		<Axis File="M3K2 rY.xti" Id="3"/>
 	</NC>
 </TcSmItem>

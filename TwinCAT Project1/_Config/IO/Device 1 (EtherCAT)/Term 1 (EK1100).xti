@@ -67,50 +67,52 @@
 				<BootStrapData>0010f400f410f400</BootStrapData>
 				<SuName>Term 4 (EL9221-5000)</SuName>
 				<MBoxUserCmdData>004003000a00000000000000030010000000000000000000000000000000000020f3100502000000010000</MBoxUserCmdData>
+				<MBoxUserCmdData>020003000c0000000c000000030000000000000000000000000000000000000020111001040000006c6f6164537562496e6465782030303100</MBoxUserCmdData>
+				<MBoxUserCmdData>02000300090000000f00000003000000000000000000000000000000000000002000801101000000084e6f6d696e616c2043757272656e7400</MBoxUserCmdData>
 				<Pdo Name="OCP Inputs" Index="#x1a00" Flags="#x0010" SyncMan="3">
-					<Entry Name="Status__Enabled" Index="#x6000" Sub="#x01">
+					<Entry Name="Status__Enabled" Index="#x6000" Sub="#x01" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
-					<Entry Name="Status__Tripped" Index="#x6000" Sub="#x02">
-						<Type>BIT</Type>
-					</Entry>
-					<Entry Name="Status__">
-						<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
-					</Entry>
-					<Entry Name="Status__Hardware Protection" Index="#x6000" Sub="#x05">
+					<Entry Name="Status__Tripped" Index="#x6000" Sub="#x02" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
 					<Entry Name="Status__">
 						<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
 					</Entry>
-					<Entry Name="Status__Current Level Warning" Index="#x6000" Sub="#x08">
+					<Entry Name="Status__Hardware Protection" Index="#x6000" Sub="#x05" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
-					<Entry Name="Status__Cool Down Lock" Index="#x6000" Sub="#x09">
+					<Entry Name="Status__">
+						<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+					</Entry>
+					<Entry Name="Status__Current Level Warning" Index="#x6000" Sub="#x08" Flags="#x00008020">
+						<Type>BIT</Type>
+					</Entry>
+					<Entry Name="Status__Cool Down Lock" Index="#x6000" Sub="#x09" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
 					<Entry Name="Status__">
 						<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
 					</Entry>
-					<Entry Name="Status__Diag" Index="#x6000" Sub="#x0d">
+					<Entry Name="Status__Diag" Index="#x6000" Sub="#x0d" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
-					<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0e">
+					<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0e" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
-					<Entry Name="Status__Input cycle counter" Index="#x6000" Sub="#x0f">
+					<Entry Name="Status__Input cycle counter" Index="#x6000" Sub="#x0f" Flags="#x00008020">
 						<Type>BIT2</Type>
 					</Entry>
 					<Entry Name="Status__">
 						<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
 					</Entry>
-					<Entry Name="Status__Error" Index="#x6000" Sub="#x13">
+					<Entry Name="Status__Error" Index="#x6000" Sub="#x13" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
-					<Entry Name="Status__State Reset" Index="#x6000" Sub="#x14">
+					<Entry Name="Status__State Reset" Index="#x6000" Sub="#x14" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
-					<Entry Name="Status__State Switch" Index="#x6000" Sub="#x15">
+					<Entry Name="Status__State Switch" Index="#x6000" Sub="#x15" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
 					<Entry Name="Status__">
@@ -118,10 +120,10 @@
 					</Entry>
 				</Pdo>
 				<Pdo Name="OCP Outputs" Index="#x1600" InOut="1" Flags="#x0010" SyncMan="2">
-					<Entry Name="Control__Reset" Index="#x7000" Sub="#x01">
+					<Entry Name="Control__Reset" Index="#x7000" Sub="#x01" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
-					<Entry Name="Control__Switch" Index="#x7000" Sub="#x02">
+					<Entry Name="Control__Switch" Index="#x7000" Sub="#x02" Flags="#x00008020">
 						<Type>BIT</Type>
 					</Entry>
 					<Entry Name="Control__">
