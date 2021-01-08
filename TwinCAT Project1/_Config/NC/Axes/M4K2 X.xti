@@ -1355,7 +1355,7 @@ External Setpoint Generation:
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="29">
-			<EncPara ScaleFactorNumerator="5e-06" Offset="-21445" MaxCount="#xffffffff" ReferenceSystem="1">
+			<EncPara ScaleFactorNumerator="5e-06" Offset="-29.51" MaxCount="#xffffffff" ReferenceSystem="1">
 				<Inc RefSoftSyncMask="#x00000000"/>
 			</EncPara>
 			<Vars VarGrpType="1">

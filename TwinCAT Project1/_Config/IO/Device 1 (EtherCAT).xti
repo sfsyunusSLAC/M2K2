@@ -5,8 +5,8 @@
 		<AddressInfo>
 			<Pnp>
 				<DeviceDesc>Ethernet 2 (TwinCAT-Intel PCI Ethernet Adapter (Gig</DeviceDesc>
-				<DeviceName>\DEVICE\{A097EBBA-8179-4E24-945D-3EDB07759F1C}</DeviceName>
-				<DeviceData>a44cc8342895</DeviceData>
+				<DeviceName>\DEVICE\{EB27DB66-3F9A-42A5-8C93-14653E5B0BBF}</DeviceName>
+				<DeviceData>10653011c4ec</DeviceData>
 			</Pnp>
 		</AddressInfo>
 		<Image Id="1" AddrType="9" ImageType="3">

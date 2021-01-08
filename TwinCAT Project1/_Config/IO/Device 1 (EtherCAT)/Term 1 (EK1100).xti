@@ -141,8 +141,20 @@
 		<Box File="M4K2 rX.xti" Id="6">
 			<EtherCAT PortABoxInfo="#x01000007"/>
 		</Box>
-		<Box File="STO (EL1004).xti" Id="8">
+		<Box File="Term 10 (EL9410).xti" Id="10">
 			<EtherCAT PortABoxInfo="#x01000006"/>
+		</Box>
+		<Box File="Term 11 (EL3204).xti" Id="11">
+			<EtherCAT PortABoxInfo="#x0100000a"/>
+		</Box>
+		<Box File="Term 12 (EL3202-0010).xti" Id="12">
+			<EtherCAT PortABoxInfo="#x0100000b"/>
+		</Box>
+		<Box File="Term 13 (EL3054).xti" Id="13">
+			<EtherCAT PortABoxInfo="#x0100000c"/>
+		</Box>
+		<Box File="STO (EL1004).xti" Id="8">
+			<EtherCAT PortABoxInfo="#x0100000d"/>
 		</Box>
 		<Box BoxType="9099" Id="9">
 			<Name>Term 9 (EL9011)</Name>

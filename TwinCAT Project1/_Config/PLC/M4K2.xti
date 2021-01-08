@@ -898,7 +898,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{EE2891CD-1517-4345-BE6E-EB1367563E2D}" Name="M4K2" PrjFilePath="..\..\M4K2\M4K2.plcproj" TmcFilePath="..\..\M4K2\M4K2.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="M3K2\M3K2.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="M4K2\M4K2.tmc">
 			<Name>M4K2 Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1777,15 +1777,15 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.bSTOEnable1" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.bSTOEnable2" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M2K2 X">
+			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M4K2 X">
 				<Link VarA="PlcTask Inputs^Main.M1.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M1.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M2K2 Y">
+			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M4K2 Y">
 				<Link VarA="PlcTask Inputs^Main.M2.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M2.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M2K2 rX">
+			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M4K2 rX">
 				<Link VarA="PlcTask Inputs^Main.M3.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M3.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 			</OwnerB>
